@@ -30,4 +30,11 @@ func InitRouter(r *gin.Engine) {
 	//
 	apiRouter.POST("/user/updatepersonalinfo/", utils.Auth(), controller.UpdatePersonalInfo)
 
+	/*
+		帖子
+	*/
+	// 发送帖子
+	apiRouter.POST("/post/sendpost/", utils.Auth(), controller.SendPost)
+	// 获取帖子流
+
 }
